@@ -2,9 +2,9 @@
   "name": "genetics-simulator",
   "version": "0.0.1",
   "description": "Simulador Genetico",
-  "main": "app.js",
+  "main": "/src/app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node ./src/app.js"
   },
   "author": "Pedro Manuel del Río",
   "license": "ISC"
