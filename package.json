@@ -4,8 +4,12 @@
   "description": "Simulador Genetico",
   "main": "/src/app.js",
   "scripts": {
-    "start": "node ./src/app.js"
+    "start": "tsc && node dist/src/app.js"
   },
   "author": "Pedro Manuel del Río",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "tslint": "^6.1.3",
+    "typescript": "^4.7.2"
+  }
 }
