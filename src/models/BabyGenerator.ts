@@ -1,7 +1,12 @@
-import eyesColor from "../data/eyesColor"
 import { Person } from "./Person"
 
 
+function tryBaby(female:Person,male:Person):Person|boolean|any{
+
+    console.log(   female.getfertility()  )
+    console.log(   male.getfertility()  )
+
+}
 
 function giveBirth(female:Person,male:Person):Person|boolean{
 
@@ -14,6 +19,8 @@ function giveBirth(female:Person,male:Person):Person|boolean{
     baby.genderBinary=Math.random() < 0.5
     baby.eyesColor = getColorEyes(female,male)
     baby.dinasty = male.dinasty
+    baby.name="baby"
+    //baby.race = male.
     return baby;
 
 }
@@ -76,4 +83,4 @@ function getColorEyes(female:Person,male:Person):string{
 
 
 
-export  { giveBirth }
+export  { giveBirth,tryBaby }

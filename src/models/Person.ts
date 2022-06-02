@@ -12,6 +12,7 @@ export class Person {
     mother:Person
     id:number
     age:number
+    mbti:string
 
     constructor() {
         this.id = Math.floor(new Date().valueOf() * Math.random())
