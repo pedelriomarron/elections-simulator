@@ -15,44 +15,54 @@ country.name="Spain"
 country.cities =  createCities(JSON.parse(JSON.stringify(cities)));
 country.parties= createParties(JSON.parse(JSON.stringify(parties)));
 country.coalitions=createCoalitions(coalitions,country.parties)
-
-let partiesAndcoalitions:Array<Party|Coalition> = []
-let partiesCount:Array<{party:Party|Coalition,seats:number}> = []
-
-partiesAndcoalitions=partiesAndcoalitions.concat(country.parties,country.coalitions)
-partiesAndcoalitions.map(p=>{
-    partiesCount.push({party:p,seats:0})
-})
-
-country.cities.map(city=>{
-    console.log("Votaciones de: **",city.name," **")
-        let vc1= new VoteCount();
-        vc1.city=city
-        vc1.generateValidVoteTables(country.parties,country.coalitions)
-        vc1.vote(true,3,0.5)
-        vc1.generateAllQuotients()
-        country.voteCounts.push(vc1)
-})
-
-
-
-country.voteCounts.map(vc=>{
-    console.log("Ciudad: **",vc.city.name," **")
-    vc.voteTables.map(vt=>{
-        let tempParty = partiesCount.find(item=> item.party.slug === vt.party.slug)
-        tempParty.seats = tempParty.seats+vt.seats
-    })
-})
-
-partiesCount.sort((a,b) => b.seats - a.seats)
-
-
-console.log(partiesCount)
+country.vote()
+//console.log(country.partiesCount)
 
 //Dividir coaliciones
 
 
 
+let temp:Array<{party:Coalition,seats:number}> = country.partiesCount.filter(pc=> pc.party instanceof Coalition)as Array<{party:Coalition,seats:number}>
+
+temp.map(pc=>{
+    let auxSeats=  pc.seats 
+    pc.party.parties.map(i=>{
+        console.log(i.percentage,i.party.name)
+    })
+    distribute(pc.party,auxSeats,country.partiesCount)
+})
+
+function distribute(coalition:Coalition,seats:number,partiesCount:Array<{party:Party,seats:number}>){
+    let total:number = 0
+    let quotients = []
+    coalition.parties.sort((a,b) => b.percentage - a.percentage); 
+
+    coalition.parties.map(vt=>{
+        if(vt.percentage>=3){
+            quotients = quotients.concat(generateQuotients(seats,vt))
+        }
+    })
+    quotients.sort((a,b) => b.n - a.n); 
+
+    for(let i = 0;i<seats;i++){
+        let slug = quotients[i].party.slug
+        partiesCount.find(vt=> vt.party.slug === slug).seats++
+        total++
+    }
+}
+
+function generateQuotients(seats,pp:{party:Party,percentage:number}){
+    let array = []
+    for(let i = 1;i<=seats;i++){
+        array.push({party:pp.party,n:Math.round(pp.percentage/i)})
+    }
+    return array
+}
+
+country.partiesCount = country.partiesCount.filter(pc=> !(pc.party instanceof Coalition))as Array<{party:Party,seats:number}>
+
+
+console.log(country.partiesCount)
 
 
 

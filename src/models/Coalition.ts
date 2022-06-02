@@ -23,6 +23,13 @@ import {Party} from "./Party";
         return pop   
     }
 
+    getTotalPercentage(){
+        let pop:number = 0
+        this.parties.map(p=>{
+            pop += p.percentage
+        })
+        return pop  
+    }
 
 }
 

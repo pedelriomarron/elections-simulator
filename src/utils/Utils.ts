@@ -2,9 +2,8 @@ import * as fs from 'fs';
 import { City } from '../models/City';
 import { Coalition } from '../models/Coalition';
 import { Party } from '../models/Party';
-import { Person } from '../models/Person';
 
-
+/*
 function createCSV(persons:Array<Person>,path:string){
 
      let myObj = {
@@ -56,6 +55,7 @@ fs.writeFile(path, csv, 'utf8', function(err) {
 });
     
 }
+*/
 
 
 function personalRounder(num:number):number{

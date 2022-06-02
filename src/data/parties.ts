@@ -7,7 +7,7 @@ const parties = [
         "color":"#E4010B",
         "includedCities":[],
         "excludedCities":[],
-        "popularity":[{city:"global",popularity:30}]
+        "popularity":[{city:"global",popularity:28}]
 
     },
     {
@@ -18,7 +18,7 @@ const parties = [
         "includedCities":[],
         "excludedCities":[],
         "popularity":[
-            {city:"global",popularity:25},
+            {city:"global",popularity:21},
 
         ]
 
@@ -30,7 +30,7 @@ const parties = [
         "color":"#7CBD2A",
         "includedCities":[],
         "excludedCities":[],
-        "popularity":[{city:"global",popularity:20}]
+        "popularity":[{city:"global",popularity:15}]
 
     },    
     {
@@ -51,7 +51,7 @@ const parties = [
         "includedCities":[],
         "excludedCities":[],
         "popularity":[
-            {city:"global",popularity:6},
+            {city:"global",popularity:4},
         ]
 
     },
@@ -82,7 +82,7 @@ const parties = [
         "color":"#FF4E00",
         "includedCities":[],
         "excludedCities":[],
-        "popularity":[{city:"global",popularity:8}]
+        "popularity":[{city:"global",popularity:6}]
 
     },
     {
@@ -202,7 +202,7 @@ const parties = [
         "color":"#FF4E00",
         "includedCities":[],
         "excludedCities":[],
-        "popularity":[{city:"global",popularity:0}]
+        "popularity":[{city:"global",popularity:2}]
 
     },
     {
@@ -232,7 +232,7 @@ const parties = [
         "color":"#FF4E00",
         "includedCities":[],
         "excludedCities":[],
-        "popularity":[{city:"global",popularity:0.25}]
+        "popularity":[{city:"global",popularity:0.04}]
 
     },
     {
@@ -242,7 +242,7 @@ const parties = [
         "color":"#FF4E00",
         "includedCities":[],
         "excludedCities":[],
-        "popularity":[{city:"global",popularity:0.25}]
+        "popularity":[{city:"global",popularity:0}]
 
     },
     {
@@ -252,7 +252,7 @@ const parties = [
         "color":"#FF4E00",
         "includedCities":[],
         "excludedCities":[],
-        "popularity":[{city:"global",popularity:0.25}]
+        "popularity":[{city:"global",popularity:0.02}]
 
     },
     {
@@ -262,7 +262,7 @@ const parties = [
         "color":"#FF4E00",
         "includedCities":[],
         "excludedCities":[],
-        "popularity":[{city:"global",popularity:0.05}]
+        "popularity":[{city:"global",popularity:0.04}]
 
     },
     {
@@ -272,7 +272,7 @@ const parties = [
         "color":"#FF4E00",
         "includedCities":[],
         "excludedCities":[],
-        "popularity":[{city:"global",popularity:0.05}]
+        "popularity":[{city:"global",popularity:0.04}]
 
     },
     {
@@ -282,7 +282,7 @@ const parties = [
         "color":"#FF4E00",
         "includedCities":[],
         "excludedCities":[],
-        "popularity":[{city:"global",popularity:0.05}]
+        "popularity":[{city:"global",popularity:0.04}]
 
     },
     {
@@ -292,7 +292,7 @@ const parties = [
         "color":"#FF4E00",
         "includedCities":[],
         "excludedCities":[],
-        "popularity":[{city:"global",popularity:0.05}]
+        "popularity":[{city:"global",popularity:0.04}]
 
     },
     {
@@ -302,7 +302,7 @@ const parties = [
         "color":"#FF4E00",
         "includedCities":[],
         "excludedCities":[],
-        "popularity":[{city:"global",popularity:0.1}]
+        "popularity":[{city:"global",popularity:0.06}]
 
     },
     {
@@ -312,7 +312,7 @@ const parties = [
         "color":"#FF4E00",
         "includedCities":[],
         "excludedCities":[],
-        "popularity":[{city:"global",popularity:0.1}]
+        "popularity":[{city:"global",popularity:0.11}]
 
     },
     {
@@ -322,7 +322,7 @@ const parties = [
         "color":"#FF4E00",
         "includedCities":[],
         "excludedCities":[],
-        "popularity":[{city:"global",popularity:0.7}]
+        "popularity":[{city:"global",popularity:0.05}]
 
     },
     {
