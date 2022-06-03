@@ -2,12 +2,15 @@ import { personalRounder } from "../utils/Utils";
 import {City} from "./City";
 import { Coalition } from "./Coalition";
 import {Party} from "./Party";
+import Quotient from "./Quotient";
+import Seat from "./Seat";
 import VoteTable from "./VoteTable";
 
 export default class VoteCount {
     voteTables:Array<VoteTable>= [];
     city:City
-    quotients:{party:Party,votes:number}[]= []
+    quotients:Quotient[]= []
+    seatsWinner:Seat[]= []
     totalVotes:number;
     abstentions:number
     invalidVotes:number
@@ -33,7 +36,8 @@ export default class VoteCount {
         this.voteTables.map(vt=>{
             vt.percentageVotes = personalRounder( ((vt.votes*100)/this.getValidVotes()))
             if(vt.percentageVotes>=3){
-                this.quotients = this.quotients.concat(vt.generateQuotients(this.city.seats))
+                //this.quotients = this.quotients.concat(vt.generateQuotients(this.city.seats))
+                this.quotients = this.quotients.concat(vt.generateQuotients(this.city))
             }
         })
         this.quotients.sort((a,b) => b.votes - a.votes); 
@@ -42,8 +46,11 @@ export default class VoteCount {
 
     countSeats(){
         for(let i = 0;i<this.city.seats;i++){
-            let slug = this.quotients[i].party.slug
+            let slug = this.quotients[i].politician.party.slug
             this.voteTables.find(vt=> vt.party.slug === slug).seats++
+            let s = new Seat()
+            s.Quotient=this.quotients[i]
+            this.seatsWinner.push(s)
         }
     }
 

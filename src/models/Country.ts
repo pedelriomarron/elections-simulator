@@ -14,6 +14,9 @@ import VoteCount from "./VoteCount";
     //Contador de elecciones
     partiesCount:Array<{party:Party|Coalition,seats:number}> = []
     partiesAndcoalitions:Array<Party|Coalition> = []
+    maxRandom:number=0
+    minRandom:number=0
+    random:boolean=false
 
 
 
@@ -31,7 +34,7 @@ import VoteCount from "./VoteCount";
                 let vc1= new VoteCount();
                 vc1.city=city
                 vc1.generateValidVoteTables(this.parties,this.coalitions)
-                vc1.vote(true,80,0.5)
+                vc1.vote(this.random,this.maxRandom,this.minRandom)
                 vc1.generateAllQuotients()
                 this.voteCounts.push(vc1)
         })

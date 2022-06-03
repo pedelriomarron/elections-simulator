@@ -2,6 +2,7 @@ import * as fs from 'fs';
 import { City } from '../models/City';
 import { Coalition } from '../models/Coalition';
 import { Party } from '../models/Party';
+import Politician from '../models/Politician';
 
 /*
 function createCSV(persons:Array<Person>,path:string){
@@ -87,4 +88,12 @@ function jsonConcat(o1, o2) {
     return o1;
 }
 
-export {personalRounder,jsonConcat,MyClassFactory}
+function generatePolitic(names,lastnames){
+
+  let p = new Politician()
+  p.name = names[Math.floor(Math.random()*names.length)];
+  p.lastname = lastnames[Math.floor(Math.random()*lastnames.length)];
+  return p
+}
+
+export {personalRounder,jsonConcat,MyClassFactory,generatePolitic}

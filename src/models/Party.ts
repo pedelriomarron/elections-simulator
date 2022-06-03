@@ -12,6 +12,9 @@ class Party {
     popularity:Array<{city:string,popularity:number}> = []
     
 
+    toString = () => JSON.stringify(this, null, '  ');
+
+
     getPopularity(city:City){
         let pop:number
 

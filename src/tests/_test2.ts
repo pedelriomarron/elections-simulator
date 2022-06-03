@@ -1,5 +1,6 @@
 import cities from "../data/cities";
 import coalitions from "../data/coalitions";
+import { lastname, malename } from "../data/names-lastnames";
 import parties  from "../data/parties";
 import {City, createCities} from "../models/City";
 import {Coalition, createCoalitions} from "../models/Coalition";
@@ -7,7 +8,8 @@ import Country from "../models/Country";
 import {Party,createParties} from "../models/Party";
 import VoteCount from "../models/VoteCount";
 import VoteTable from "../models/VoteTable";
-import { personalRounder } from "../utils/Utils";
+import { generatePolitic, personalRounder } from "../utils/Utils";
+const util = require('util')
 
 //Country
 let country = new Country()
@@ -27,7 +29,7 @@ let temp:Array<{party:Coalition,seats:number}> = country.partiesCount.filter(pc=
 temp.map(pc=>{
     let auxSeats=  pc.seats 
     pc.party.parties.map(i=>{
-        console.log(i.percentage,i.party.name)
+        //console.log(i.percentage,i.party.name)
     })
     distribute(pc.party,auxSeats,country.partiesCount)
 })
@@ -62,7 +64,16 @@ function generateQuotients(seats,pp:{party:Party,percentage:number}){
 country.partiesCount = country.partiesCount.filter(pc=> !(pc.party instanceof Coalition))as Array<{party:Party,seats:number}>
 
 
-console.log(country.partiesCount)
+//console.log(country.voteCounts)
+
+country.voteCounts.map(vc=>{
+    if(vc.city.slug=="cordoba"){
+        //console.log(vc.quotients)
+
+        console.log(util.inspect( vc.seatsWinner, false,3,true))
+
+    }
+})
 
 
 
