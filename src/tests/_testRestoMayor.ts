@@ -1,6 +1,6 @@
 import parties  from "../data/parties";
 import {City} from "../models/City";
-import {Party} from "../models/PArty";
+import {Party} from "../models/Party";
 import VoteCount from "../models/VoteCount";
 import VoteTable from "../models/VoteTable";
 

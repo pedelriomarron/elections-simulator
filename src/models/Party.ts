@@ -1,5 +1,6 @@
 import { MyClassFactory, jsonConcat } from "../utils/Utils";
 import {City} from "./City";
+import Ideology from "./Ideology";
 
  
 class Party {
@@ -10,7 +11,11 @@ class Party {
     includedCities:Array<string>= []
     excludedCities:Array<string>= []
     popularity:Array<{city:string,popularity:number}> = []
+    ideology:Ideology
     
+    getIdeology():Ideology{
+        return this.ideology
+    }
 
     toString = () => JSON.stringify(this, null, '  ');
 
@@ -37,6 +42,7 @@ function createParties(parties:Array<Party>):Array<Party> {
     parties.map(c=>{
         let myInstance = MyClassFactory<Party>(Party.name);
         myInstance = jsonConcat(myInstance,c)
+        myInstance.ideology= new Ideology(c.ideology.economy,c.ideology.social)
         //console.log(myInstance)
         newParties.push(myInstance)
 

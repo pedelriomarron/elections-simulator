@@ -1,6 +1,7 @@
 import { throws } from "assert";
 import { MyClassFactory,jsonConcat } from "../utils/Utils";
 import {City} from "./City";
+import Ideology from "./Ideology";
 import {Party} from "./Party";
 
  class Coalition extends Party {
@@ -10,6 +11,22 @@ import {Party} from "./Party";
 
     constructor() {
         super();
+    }
+
+
+    getIdeology(): Ideology {
+        let economy = 0;
+        let social= 0;
+
+        this.parties.map(p=>{
+            economy+=p.party.getIdeology().economy
+            social+=p.party.getIdeology().social
+        })
+        economy=economy/this.parties.length
+        social=social/this.parties.length
+
+
+        return new Ideology(economy,social)
     }
 
     getPopularity(city:City){
@@ -56,6 +73,7 @@ function createCoalitions(coalitions,parties:Array<Party>):Array<Coalition> {
     return newCoalitions
 
 }
+
 
 
 export  {Coalition,createCoalitions}

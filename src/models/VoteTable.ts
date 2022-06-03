@@ -31,8 +31,14 @@ import Quotient from "./Quotient";
             let p = generatePolitic(malename,lastname)
             p.party=this.party
             p.name = p.name +" ("+i+") del : "+this.party.shortName
+            p.charisma =Math.floor(Math.random() * 10) + 1;
+            p.leadership=Math.floor(Math.random() * 10) + 1;
+            p.popularity=Math.floor(Math.random() * 10) + 1;
             this.politicians.push(p)
             }
+
+            this.politicians.sort((a,b) => b.getValue() - a.getValue())
+
     }
 
     generateQuotients(city:City){

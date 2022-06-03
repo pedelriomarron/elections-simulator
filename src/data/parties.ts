@@ -1,3 +1,5 @@
+import Ideology from "../models/Ideology"
+
 const parties = [
 
     {
@@ -7,7 +9,8 @@ const parties = [
         "color":"#E4010B",
         "includedCities":[],
         "excludedCities":[],
-        "popularity":[{city:"global",popularity:28}]
+        "popularity":[{city:"global",popularity:28}],
+        "ideology": {economy:30,social:60},
 
     },
     {
@@ -20,7 +23,8 @@ const parties = [
         "popularity":[
             {city:"global",popularity:21},
 
-        ]
+        ],
+        "ideology": {economy:70,social:40},
 
     },
     {
@@ -30,7 +34,8 @@ const parties = [
         "color":"#7CBD2A",
         "includedCities":[],
         "excludedCities":[],
-        "popularity":[{city:"global",popularity:15}]
+        "popularity":[{city:"global",popularity:15}],
+        "ideology": {economy:70,social:20},
 
     },    
     {
@@ -40,7 +45,8 @@ const parties = [
         "color":"#683278",
         "includedCities":[],
         "excludedCities":[],
-        "popularity":[{city:"global",popularity:9}]
+        "popularity":[{city:"global",popularity:9}],
+        "ideology": {economy:10,social:60},
 
     },
     {
@@ -52,7 +58,8 @@ const parties = [
         "excludedCities":[],
         "popularity":[
             {city:"global",popularity:4},
-        ]
+        ],
+        "ideology": {economy:1,social:8},
 
     },
     {
@@ -62,7 +69,8 @@ const parties = [
         "color":"#FF4E00",
         "includedCities":[],
         "excludedCities":[],
-        "popularity":[{city:"global",popularity:0}]
+        "popularity":[{city:"global",popularity:0}],
+        "ideology": {economy:3,social:9},
 
     },
     {
@@ -72,7 +80,8 @@ const parties = [
         "color":"#FF4E00",
         "includedCities":[],
         "excludedCities":[],
-        "popularity":[{city:"global",popularity:0}]
+        "popularity":[{city:"global",popularity:0}],
+        "ideology": {economy:3,social:8},
 
     },
     {
@@ -82,7 +91,8 @@ const parties = [
         "color":"#FF4E00",
         "includedCities":[],
         "excludedCities":[],
-        "popularity":[{city:"global",popularity:6}]
+        "popularity":[{city:"global",popularity:6}],
+        "ideology": {economy:70,social:65},
 
     },
     {
@@ -92,7 +102,8 @@ const parties = [
         "color":"#FF4E00",
         "includedCities":[],
         "excludedCities":[],
-        "popularity":[{city:"global",popularity:0}]
+        "popularity":[{city:"global",popularity:0}],
+        "ideology": {economy:0,social:0},
 
     },
     {
@@ -102,7 +113,8 @@ const parties = [
         "color":"#FF4E00",
         "includedCities":[],
         "excludedCities":[],
-        "popularity":[{city:"global",popularity:0}]
+        "popularity":[{city:"global",popularity:0}],
+        "ideology": {economy:8,social:8},
 
     },
     {
@@ -112,7 +124,8 @@ const parties = [
         "color":"#FF4E00",
         "includedCities":[],
         "excludedCities":[],
-        "popularity":[{city:"global",popularity:0}]
+        "popularity":[{city:"global",popularity:0}],
+        "ideology": {economy:0,social:8},
 
     },
     {
@@ -122,7 +135,8 @@ const parties = [
         "color":"#FF4E00",
         "includedCities":[],
         "excludedCities":[],
-        "popularity":[{city:"global",popularity:0}]
+        "popularity":[{city:"global",popularity:0}],
+        "ideology": {economy:5,social:8},
 
     },
     {
@@ -132,7 +146,8 @@ const parties = [
         "color":"#FF4E00",
         "includedCities":[],
         "excludedCities":[],
-        "popularity":[{city:"global",popularity:0}]
+        "popularity":[{city:"global",popularity:0}],
+        "ideology": {economy:5,social:8},
 
     },
     {
@@ -142,7 +157,8 @@ const parties = [
         "color":"#FF4E00",
         "includedCities":[],
         "excludedCities":[],
-        "popularity":[{city:"global",popularity:0}]
+        "popularity":[{city:"global",popularity:0}],
+        "ideology": {economy:5,social:8},
 
     },
     {
@@ -152,7 +168,8 @@ const parties = [
         "color":"#FF4E00",
         "includedCities":[],
         "excludedCities":[],
-        "popularity":[{city:"global",popularity:0}]
+        "popularity":[{city:"global",popularity:0}],
+        "ideology": {economy:5,social:8},
 
     },
     {
@@ -162,7 +179,8 @@ const parties = [
         "color":"#FF4E00",
         "includedCities":[],
         "excludedCities":[],
-        "popularity":[{city:"global",popularity:0}]
+        "popularity":[{city:"global",popularity:0}],
+        "ideology": {economy:5,social:8},
 
     },
     {
@@ -172,7 +190,8 @@ const parties = [
         "color":"#FF4E00",
         "includedCities":[],
         "excludedCities":[],
-        "popularity":[{city:"global",popularity:0}]
+        "popularity":[{city:"global",popularity:0}],
+        "ideology": {economy:5,social:8},
 
     },
     {
@@ -182,7 +201,8 @@ const parties = [
         "color":"#FF4E00",
         "includedCities":[],
         "excludedCities":[],
-        "popularity":[{city:"global",popularity:0}]
+        "popularity":[{city:"global",popularity:0}],
+        "ideology": {economy:5,social:8},
 
     },
     {
@@ -192,7 +212,8 @@ const parties = [
         "color":"#FF4E00",
         "includedCities":[],
         "excludedCities":[],
-        "popularity":[{city:"global",popularity:0}]
+        "popularity":[{city:"global",popularity:0}],
+        "ideology": {economy:5,social:8},
 
     },
     {
@@ -202,7 +223,8 @@ const parties = [
         "color":"#FF4E00",
         "includedCities":[],
         "excludedCities":[],
-        "popularity":[{city:"global",popularity:2}]
+        "popularity":[{city:"global",popularity:2}],
+        "ideology": {economy:5,social:8},
 
     },
     {
@@ -212,7 +234,8 @@ const parties = [
         "color":"#FF4E00",
         "includedCities":[],
         "excludedCities":[],
-        "popularity":[{city:"global",popularity:0}]
+        "popularity":[{city:"global",popularity:0}],
+        "ideology": {economy:5,social:8},
 
     },
     {
@@ -222,7 +245,8 @@ const parties = [
         "color":"#FF4E00",
         "includedCities":[],
         "excludedCities":[],
-        "popularity":[{city:"global",popularity:1}]
+        "popularity":[{city:"global",popularity:1}],
+        "ideology": {economy:5,social:8},
 
     },
     {
@@ -232,7 +256,8 @@ const parties = [
         "color":"#FF4E00",
         "includedCities":[],
         "excludedCities":[],
-        "popularity":[{city:"global",popularity:0.04}]
+        "popularity":[{city:"global",popularity:0.04}],
+        "ideology": {economy:5,social:8},
 
     },
     {
@@ -242,7 +267,8 @@ const parties = [
         "color":"#FF4E00",
         "includedCities":[],
         "excludedCities":[],
-        "popularity":[{city:"global",popularity:0}]
+        "popularity":[{city:"global",popularity:0}],
+        "ideology": {economy:5,social:8},
 
     },
     {
@@ -252,7 +278,8 @@ const parties = [
         "color":"#FF4E00",
         "includedCities":[],
         "excludedCities":[],
-        "popularity":[{city:"global",popularity:0.02}]
+        "popularity":[{city:"global",popularity:0.02}],
+        "ideology": {economy:5,social:8},
 
     },
     {
@@ -262,7 +289,8 @@ const parties = [
         "color":"#FF4E00",
         "includedCities":[],
         "excludedCities":[],
-        "popularity":[{city:"global",popularity:0.04}]
+        "popularity":[{city:"global",popularity:0.04}],
+        "ideology": {economy:5,social:8},
 
     },
     {
@@ -272,7 +300,8 @@ const parties = [
         "color":"#FF4E00",
         "includedCities":[],
         "excludedCities":[],
-        "popularity":[{city:"global",popularity:0.04}]
+        "popularity":[{city:"global",popularity:0.04}],
+        "ideology": {economy:5,social:8},
 
     },
     {
@@ -282,7 +311,8 @@ const parties = [
         "color":"#FF4E00",
         "includedCities":[],
         "excludedCities":[],
-        "popularity":[{city:"global",popularity:0.04}]
+        "popularity":[{city:"global",popularity:0.04}],
+        "ideology": {economy:5,social:8},
 
     },
     {
@@ -292,7 +322,8 @@ const parties = [
         "color":"#FF4E00",
         "includedCities":[],
         "excludedCities":[],
-        "popularity":[{city:"global",popularity:0.04}]
+        "popularity":[{city:"global",popularity:0.04}],
+        "ideology": {economy:5,social:8},
 
     },
     {
@@ -302,7 +333,8 @@ const parties = [
         "color":"#FF4E00",
         "includedCities":[],
         "excludedCities":[],
-        "popularity":[{city:"global",popularity:0.06}]
+        "popularity":[{city:"global",popularity:0.06}],
+        "ideology": {economy:5,social:8},
 
     },
     {
@@ -312,7 +344,8 @@ const parties = [
         "color":"#FF4E00",
         "includedCities":[],
         "excludedCities":[],
-        "popularity":[{city:"global",popularity:0.11}]
+        "popularity":[{city:"global",popularity:0.11}],
+        "ideology": {economy:5,social:8},
 
     },
     {
@@ -322,7 +355,8 @@ const parties = [
         "color":"#FF4E00",
         "includedCities":[],
         "excludedCities":[],
-        "popularity":[{city:"global",popularity:0.05}]
+        "popularity":[{city:"global",popularity:0.05}],
+        "ideology": {economy:5,social:8},
 
     },
     {
@@ -332,7 +366,8 @@ const parties = [
         "color":"#FF4E00",
         "includedCities":[],
         "excludedCities":[],
-        "popularity":[{city:"global",popularity:0}]
+        "popularity":[{city:"global",popularity:0}],
+        "ideology": {economy:5,social:8},
 
     },
     {
@@ -342,7 +377,8 @@ const parties = [
         "color":"#FF4E00",
         "includedCities":[],
         "excludedCities":[],
-        "popularity":[{city:"global",popularity:0}]
+        "popularity":[{city:"global",popularity:0}],
+        "ideology": {economy:75,social:35},
 
     },
     {
@@ -352,7 +388,8 @@ const parties = [
         "color":"#FF4E00",
         "includedCities":[],
         "excludedCities":[],
-        "popularity":[{city:"global",popularity:0}]
+        "popularity":[{city:"global",popularity:0}],
+        "ideology": {economy:5,social:8},
 
     },
     {
@@ -362,7 +399,8 @@ const parties = [
         "color":"#FF4E00",
         "includedCities":[],
         "excludedCities":[],
-        "popularity":[{city:"global",popularity:0}]
+        "popularity":[{city:"global",popularity:0}],
+        "ideology": {economy:5,social:8},
 
     },
     {
@@ -372,7 +410,8 @@ const parties = [
         "color":"#FF4E00",
         "includedCities":[],
         "excludedCities":[],
-        "popularity":[{city:"global",popularity:0}]
+        "popularity":[{city:"global",popularity:0}],
+        "ideology": {economy:5,social:8},
 
     },
 

@@ -70,9 +70,20 @@ country.voteCounts.map(vc=>{
     if(vc.city.slug=="cordoba"){
         //console.log(vc.quotients)
 
-        console.log(util.inspect( vc.seatsWinner, false,3,true))
+        //console.log(util.inspect( vc.seatsWinner, false,3,true))
 
     }
+})
+
+let psoe = country.parties[0]
+country.parties.map(p=>{
+            console.log(util.inspect( "Partido PSOE vs "+p.shortName+" distancia=>"+psoe.getIdeology().getDistance(p.getIdeology())+p.getIdeology().getName(), false,3,true))
+
+})
+
+country.coalitions.map(p=>{
+    console.log(util.inspect( "Partido PSOE vs "+p.shortName+" distancia=>"+psoe.getIdeology().getDistance(p.getIdeology())+p.getIdeology().getName(), false,3,true))
+
 })
 
 
