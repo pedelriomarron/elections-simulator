@@ -20,3 +20,31 @@ html
                                             li= "Politico: " + val1.quotient.politician.name+" - Partido (Real): "+val1.quotient.politician.party.name+" - (Coalicion): "+val1.quotient.partyWinner.name
 
         <hr>
+        a.svg(href='/')
+            object(type="image/svg+xml" id="map" data="http://localhost:3000/public/map.svg")
+
+
+
+        script.
+
+                var a = document.getElementById("map");
+                    // It's important to add an load event listener to the object,
+                    // as it will load the svg doc asynchronously
+                    a.addEventListener("load", function () {
+                        // get the inner DOM of alpha.svg
+                        svgDoc = a.contentDocument;
+                        // get the inner element by id
+                        var paths = svgDoc.querySelectorAll("path");
+                        svgDoc.getElementById('ES-CO').setAttribute('style', 'fill:green');
+
+                        // add behaviour
+                        paths.getElementById("ES-CO").setAttribute('style', 'fill:green');
+                        console.log(paths)
+                        for (i = 0; i < paths.length; i++) {
+                           // paths[i].setAttribute('style', 'fill:green');
+                        }
+
+                    }, false);
+
+
+

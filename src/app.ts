@@ -4,7 +4,9 @@ const express = require('express');
 const port = process.env.PORT || 3000;
 const app = express();
 
-app.use('/static', express.static(__dirname + '/public'));
+//app.use('/public', express.static(__dirname + '/public'));
+app.use('/public', express.static('public'));
+
 
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
@@ -16,7 +18,7 @@ app.set('views', './src/views');
 app.set('view engine', 'pug');
 
 app.get('/hello', (req, res) => {
-  res.render('hello.pug', { country: country }); // Se muestra la plantilla hello.pug
+  res.render('hello.pug', { country: country, }); // Se muestra la plantilla hello.pug
 });
 
 app.get('/urlparam', (req, res) => {

@@ -50,6 +50,10 @@ const parties = [
             {city:"tarragona",popularity:3.6},
             {city:"gerona",popularity:2.9},
             {city:"lerida",popularity:2.4},
+            {city:"la-coruna",popularity:5.1},
+            {city:"lugo",popularity:3.7},
+            {city:"pontevedra",popularity:6.3},
+            {city:"orense",popularity:3.2},
     ],
         "ideology": {economy:10,social:60},
 
@@ -67,6 +71,10 @@ const parties = [
             {city:"tarragona",popularity:0},
             {city:"gerona",popularity:0},
             {city:"lerida",popularity:0},
+            {city:"la-coruna",popularity:0},
+            {city:"lugo",popularity:0},
+            {city:"pontevedra",popularity:0},
+            {city:"orense",popularity:0},
         ],
         "ideology": {economy:1,social:8},
 
@@ -178,6 +186,8 @@ const parties = [
             {city:"alava",popularity:16},
             {city:"guipuzcoa",popularity:26},
             {city:"vizcaya",popularity:15},
+            {city:"navarra",popularity:17},
+
         ],
         "ideology": {economy:5,social:8},
 
@@ -189,7 +199,11 @@ const parties = [
         "color":"#FF4E00",
         "includedCities":[],
         "excludedCities":[],
-        "popularity":[{city:"global",popularity:0}],
+        "popularity":[
+            {city:"global",popularity:0},
+            {city:"las-palmas",popularity:0.1},
+            {city:"santa-cruz-de-tenerife",popularity:0.1},
+        ],
         "ideology": {economy:5,social:8},
 
     },
@@ -200,7 +214,11 @@ const parties = [
         "color":"#FF4E00",
         "includedCities":[],
         "excludedCities":[],
-        "popularity":[{city:"global",popularity:0}],
+        "popularity":[
+            {city:"global",popularity:0},
+            {city:"las-palmas",popularity:0.1},
+            {city:"santa-cruz-de-tenerife",popularity:0.1},
+        ],
         "ideology": {economy:5,social:8},
 
     },
@@ -262,7 +280,11 @@ const parties = [
         "color":"#FF4E00",
         "includedCities":[],
         "excludedCities":[],
-        "popularity":[{city:"global",popularity:0}],
+        "popularity":[
+            {city:"global",popularity:0},
+            {city:"las-palmas",popularity:5},
+            {city:"santa-cruz-de-tenerife",popularity:8.5},
+        ],
         "ideology": {economy:5,social:8},
 
     },
@@ -273,7 +295,11 @@ const parties = [
         "color":"#FF4E00",
         "includedCities":[],
         "excludedCities":[],
-        "popularity":[{city:"global",popularity:0}],
+        "popularity":[
+            {city:"global",popularity:0},
+            {city:"las-palmas",popularity:5},
+            {city:"santa-cruz-de-tenerife",popularity:8.5},
+        ],
         "ideology": {economy:5,social:8},
 
     },
@@ -284,7 +310,13 @@ const parties = [
         "color":"#FF4E00",
         "includedCities":[],
         "excludedCities":[],
-        "popularity":[{city:"global",popularity:0}],
+        "popularity":[
+            {city:"global",popularity:0},
+            {city:"la-coruna",popularity:7.62},
+            {city:"lugo",popularity:5.5},
+            {city:"pontevedra",popularity:9.3},
+            {city:"orense",popularity:4.8},
+        ],
         "ideology": {economy:5,social:8},
 
     },
