@@ -161,7 +161,7 @@ const cities = [
         "abstention": 32
     },    {
         "name":"Toledo",
-        "slug":"Toledo",
+        "slug":"toledo",
         "seats":6,
         "voters": 521484,
         "abstention": 30

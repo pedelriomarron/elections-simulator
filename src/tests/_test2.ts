@@ -24,10 +24,10 @@ country.vote()
 
 
 //Coge las coaliciones
-let temp:Array<{party:Coalition,seats:number}> = country.partiesCount.filter(pc=> pc.party instanceof Coalition)as Array<{party:Coalition,seats:number}>
+//let temp:Array<{party:Coalition,seats:number}> = country.partiesCount.filter(pc=> pc.party instanceof Coalition)as Array<{party:Coalition,seats:number}>
 
 
-
+/*
 temp.map(pc=>{
     let auxSeats=  pc.seats 
     pc.party.parties.map(i=>{
@@ -35,6 +35,7 @@ temp.map(pc=>{
     })
     distribute(pc.party,auxSeats,country.partiesCount)
 })
+*/
 
 function distribute(coalition:Coalition,seats:number,partiesCount:Array<{party:Party,seats:number}>){
     let total:number = 0
@@ -102,6 +103,8 @@ country.voteCounts.map(p=>{
 })
 //console.log(country.voteCounts)
 
+
+country.getMapColors()
 export {country}
 
 

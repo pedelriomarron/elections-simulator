@@ -13,12 +13,24 @@ import VoteCount from "./VoteCount";
     parties:Array<Party>=[]
     coalitions:Array<Coalition>=[]
     //Contador de elecciones
-    partiesCount:Array<{party:Party|Coalition,seats:number,seatObject:Seat}> = []
-    partiesAndcoalitions:Array<Party|Coalition> = []
+    //partiesCount:Array<{party:Party|Coalition,seats:number,seatObject:Seat}> = []
+    //partiesAndcoalitions:Array<Party|Coalition> = []
     maxRandom:number=100
     minRandom:number=0
     random:boolean=false
 
+
+
+
+    getMapColors():Array<{citySlug:string,color:string,seats:number}>{
+        let arrayColors=[]
+        this.voteCounts.map(vc=>{
+            let temp = vc.getPartyCount()[0]
+            //console.log(vc.getPartyCount()[0].seats,vc.getPartyCount()[0].party.name,vc.city.slug)
+            arrayColors.push({seats:temp.seats,color:temp.party.color,citySlug:vc.city.slug})
+        })
+        return arrayColors
+    }
 
 
     getSeats():number{

@@ -4,7 +4,7 @@ const coalitions = [
         "name":"Unidas Podemos",
         "shortName":"Unidas Podemos",
         "slug":"podemos-iu",
-        "color":"#FF4E00",
+        "color":"#693279",
         "includedCities":[],
         "excludedCities":[],
         "parties":[
@@ -17,7 +17,7 @@ const coalitions = [
         "name":"Ahora Canarias",
         "shortName":"Ahora Canarias",
         "slug":"ahora-canarias",
-        "color":"#FF4E00",
+        "color":"#1E7D44",
         "includedCities":[],
         "excludedCities":[],
         "parties":[
@@ -30,7 +30,7 @@ const coalitions = [
         "name":"Esquerra Republicana de Catalunya-Sobiranistes",
         "shortName":"ERC-Sobiranistes",
         "slug":"erc-sobiranistes",
-        "color":"#FF4E00",
+        "color":"#FFB232",
         "includedCities":[],
         "excludedCities":[],
         "parties":[
@@ -43,7 +43,7 @@ const coalitions = [
         "name":"Junts",
         "shortName":"Junts",
         "slug":"junts",
-        "color":"#FF4E00",
+        "color":"#ED5975",
         "includedCities":[],
         "excludedCities":[],
         "parties":[
@@ -56,7 +56,7 @@ const coalitions = [
         "name":"Candidatura d'Unitat Popular - Per la Ruptura",
         "shortName":"CUP - PR",
         "slug":"cup-pr",
-        "color":"#FF4E00",
+        "color":"#FFF200",
         "includedCities":[],
         "excludedCities":[],
         "parties":[
@@ -69,7 +69,7 @@ const coalitions = [
         "name":"En Comú Podem-Guanyem el Canvi",
         "shortName":"ECP-Guanyem el Canvi",
         "slug":"ecp-guanyem-el-canvi",
-        "color":"#FF4E00",
+        "color":"#6E236E",
         "includedCities":[],
         "excludedCities":[],
         "parties":[
@@ -82,7 +82,7 @@ const coalitions = [
         "name":"Recortes Cero - Grupo Verde",
         "shortName":"Recortes Cero",
         "slug":"recortes-cero-gv",
-        "color":"#FF4E00",
+        "color":"#000000",
         "includedCities":[],
         "excludedCities":[],
         "parties":[
@@ -97,7 +97,7 @@ const coalitions = [
         "name":"Coalición Canaria - Nueva Canarias",
         "shortName":"CCa-NC",
         "slug":"cca-nc",
-        "color":"#FF4E00",
+        "color":"#FFD700",
         "includedCities":[],
         "excludedCities":[],
         "parties":[
@@ -110,7 +110,7 @@ const coalitions = [
         "name":"En Comun - Unidas Podemos",
         "shortName":"Podemos-EU",
         "slug":"podemos-eu",
-        "color":"#FF4E00",
+        "color":"#0B0682",
         "includedCities":[],
         "excludedCities":[],
         "parties":[
@@ -123,7 +123,7 @@ const coalitions = [
         "name":"Mas País-Equo",
         "shortName":"Mas País-Equo",
         "slug":"mas-pais-equo",
-        "color":"#FF4E00",
+        "color":"#14DCC5",
         "includedCities":[],
         "excludedCities":[],
         "parties":[
@@ -136,7 +136,7 @@ const coalitions = [
         "name":"Partido Popular - Foro",
         "shortName":"PP-Foro",
         "slug":"pp-foro",
-        "color":"#FF4E00",
+        "color":"#21599E",
         "includedCities":[],
         "excludedCities":[],
         "parties":[
@@ -149,7 +149,7 @@ const coalitions = [
         "name":"Navarra Suma",
         "shortName":"NA+",
         "slug":"na-suma",
-        "color":"#FF4E00",
+        "color":"#E3021D",
         "includedCities":[],
         "excludedCities":[],
         "parties":[

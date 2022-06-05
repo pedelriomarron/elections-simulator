@@ -26,25 +26,24 @@ html
 
 
         script.
-
+                var data = !{JSON.stringify(country.getMapColors())}
+                console.log(data)
                 var a = document.getElementById("map");
-                    // It's important to add an load event listener to the object,
-                    // as it will load the svg doc asynchronously
                     a.addEventListener("load", function () {
-                        // get the inner DOM of alpha.svg
                         svgDoc = a.contentDocument;
-                        // get the inner element by id
-                        var paths = svgDoc.querySelectorAll("path");
-                        svgDoc.getElementById('ES-CO').setAttribute('style', 'fill:green');
+                        //var paths = svgDoc.querySelectorAll("path");
+                        //svgDoc.getElementById("jaen").setAttribute('style', 'fill:green');
+                        data.map(map=>{
+                            //alert(map.citySlug)
+                            //svgDoc.getElementById(map.citySlug).setAttribute('style', 'fill:'+map.color);
+                            //console.log("Cambiando color de:"+map.citySlug)
+                            svgDoc.getElementById(map.citySlug).setAttribute('style', 'fill:'+map.color);
 
-                        // add behaviour
-                        paths.getElementById("ES-CO").setAttribute('style', 'fill:green');
-                        console.log(paths)
-                        for (i = 0; i < paths.length; i++) {
-                           // paths[i].setAttribute('style', 'fill:green');
-                        }
-
+                        })
                     }, false);
 
+
+        
+           
 
 
