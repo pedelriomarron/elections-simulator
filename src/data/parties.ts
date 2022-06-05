@@ -1,4 +1,3 @@
-import Ideology from "../models/Ideology"
 
 const parties = [
 
@@ -45,7 +44,13 @@ const parties = [
         "color":"#683278",
         "includedCities":[],
         "excludedCities":[],
-        "popularity":[{city:"global",popularity:9}],
+        "popularity":[
+            {city:"global",popularity:9},
+            {city:"barcelona",popularity:4.6},
+            {city:"tarragona",popularity:3.6},
+            {city:"gerona",popularity:2.9},
+            {city:"lerida",popularity:2.4},
+    ],
         "ideology": {economy:10,social:60},
 
     },
@@ -58,6 +63,10 @@ const parties = [
         "excludedCities":[],
         "popularity":[
             {city:"global",popularity:4},
+            {city:"barcelona",popularity:0},
+            {city:"tarragona",popularity:0},
+            {city:"gerona",popularity:0},
+            {city:"lerida",popularity:0},
         ],
         "ideology": {economy:1,social:8},
 
@@ -69,7 +78,13 @@ const parties = [
         "color":"#FF4E00",
         "includedCities":[],
         "excludedCities":[],
-        "popularity":[{city:"global",popularity:0}],
+        "popularity":[
+            {city:"global",popularity:0},
+            {city:"barcelona",popularity:20},
+            {city:"tarragona",popularity:25},
+            {city:"gerona",popularity:25},
+            {city:"lerida",popularity:30},
+        ],
         "ideology": {economy:3,social:9},
 
     },
@@ -80,7 +95,13 @@ const parties = [
         "color":"#FF4E00",
         "includedCities":[],
         "excludedCities":[],
-        "popularity":[{city:"global",popularity:0}],
+        "popularity":[
+            {city:"global",popularity:0},
+            {city:"barcelona",popularity:1},
+            {city:"tarragona",popularity:1},
+            {city:"gerona",popularity:1},
+            {city:"lerida",popularity:1},
+        ],
         "ideology": {economy:3,social:8},
 
     },
@@ -102,8 +123,14 @@ const parties = [
         "color":"#FF4E00",
         "includedCities":[],
         "excludedCities":[],
-        "popularity":[{city:"global",popularity:0}],
-        "ideology": {economy:0,social:0},
+        "popularity":[
+            {city:"global",popularity:0},
+            {city:"barcelona",popularity:6},
+            {city:"tarragona",popularity:6.5},
+            {city:"gerona",popularity:12.5},
+            {city:"lerida",popularity:11.2},
+        ],        
+        "ideology": {economy:80,social:50},
 
     },
     {
@@ -113,8 +140,14 @@ const parties = [
         "color":"#FF4E00",
         "includedCities":[],
         "excludedCities":[],
-        "popularity":[{city:"global",popularity:0}],
-        "ideology": {economy:8,social:8},
+        "popularity":[
+            {city:"global",popularity:0},
+            {city:"barcelona",popularity:6},
+            {city:"tarragona",popularity:6.5},
+            {city:"gerona",popularity:12.5},
+            {city:"lerida",popularity:11.2},
+        ],
+        "ideology": {economy:80,social:50},
 
     },
     {
@@ -124,7 +157,12 @@ const parties = [
         "color":"#FF4E00",
         "includedCities":[],
         "excludedCities":[],
-        "popularity":[{city:"global",popularity:0}],
+        "popularity":[
+            {city:"global",popularity:0},
+            {city:"alava",popularity:23.7},
+            {city:"guipuzcoa",popularity:30.6},
+            {city:"vizcaya",popularity:35.4},
+        ],
         "ideology": {economy:0,social:8},
 
     },
@@ -135,7 +173,12 @@ const parties = [
         "color":"#FF4E00",
         "includedCities":[],
         "excludedCities":[],
-        "popularity":[{city:"global",popularity:0}],
+        "popularity":[
+            {city:"global",popularity:0},
+            {city:"alava",popularity:16},
+            {city:"guipuzcoa",popularity:26},
+            {city:"vizcaya",popularity:15},
+        ],
         "ideology": {economy:5,social:8},
 
     },
@@ -168,7 +211,13 @@ const parties = [
         "color":"#FF4E00",
         "includedCities":[],
         "excludedCities":[],
-        "popularity":[{city:"global",popularity:0}],
+        "popularity":[
+            {city:"global",popularity:0},
+            {city:"barcelona",popularity:5},
+            {city:"tarragona",popularity:5},
+            {city:"gerona",popularity:8},
+            {city:"lerida",popularity:6},
+        ],
         "ideology": {economy:5,social:8},
 
     },
@@ -179,7 +228,30 @@ const parties = [
         "color":"#FF4E00",
         "includedCities":[],
         "excludedCities":[],
-        "popularity":[{city:"global",popularity:0}],
+        "popularity":[
+            {city:"global",popularity:0},
+            {city:"barcelona",popularity:1},
+            {city:"tarragona",popularity:1},
+            {city:"gerona",popularity:1},
+            {city:"lerida",popularity:1},
+        ],
+        "ideology": {economy:5,social:8},
+
+    },
+    {
+        "name":"Catalunya en Comú",
+        "shortName":"CatComú",
+        "slug":"catcomu",
+        "color":"#FF4E00",
+        "includedCities":[],
+        "excludedCities":[],
+        "popularity":[
+            {city:"global",popularity:0},
+            {city:"barcelona",popularity:10.9},
+            {city:"tarragona",popularity:8.4},
+            {city:"gerona",popularity:6.6},
+            {city:"lerida",popularity:5.6},
+        ],
         "ideology": {economy:5,social:8},
 
     },

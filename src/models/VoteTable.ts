@@ -1,6 +1,7 @@
 import { lastname, malename } from "../data/names-lastnames";
 import { generatePolitic } from "../utils/Utils";
 import { City } from "./City";
+import { Coalition } from "./Coalition";
 import {Party} from "./Party";
 import Politician from "./Politician";
 import Quotient from "./Quotient";
@@ -27,16 +28,35 @@ import Quotient from "./Quotient";
 
 
     generatePoliticians(city:City){
-        for(let i=1;i<city.seats+1;i++){
-            let p = generatePolitic(malename,lastname)
-            p.party=this.party
-            p.name = p.name +" ("+i+") del : "+this.party.shortName
-            p.charisma =Math.floor(Math.random() * 10) + 1;
-            p.leadership=Math.floor(Math.random() * 10) + 1;
-            p.popularity=Math.floor(Math.random() * 10) + 1;
-            this.politicians.push(p)
-            }
 
+
+        if(this.party instanceof Coalition){
+            this.party.parties.map(pa=>{
+                let politicians:Array<Politician>=[]
+                let n = ((city.seats)*pa.percentage)/100
+                for(let i=1;i<n+1;i++){
+                    let p = generatePolitic(malename,lastname)
+                    p.party=pa.party
+                    p.name = p.name +" ("+i+") del : "+pa.party.shortName
+                    p.charisma =Math.floor(Math.random() * 10) + 1;
+                    p.leadership=Math.floor(Math.random() * 10) + 1;
+                    p.popularity=Math.floor(Math.random() * 10) + 1;
+                    this.politicians.push(p)
+                    }
+            })
+
+        }else{
+            for(let i=1;i<city.seats+1;i++){
+                let p = generatePolitic(malename,lastname)
+                p.party=this.party
+                p.name = p.name +" ("+i+") del : "+this.party.shortName
+                p.charisma =Math.floor(Math.random() * 10) + 1;
+                p.leadership=Math.floor(Math.random() * 10) + 1;
+                p.popularity=Math.floor(Math.random() * 10) + 1;
+                this.politicians.push(p)
+                }
+
+        }
             this.politicians.sort((a,b) => b.getValue() - a.getValue())
 
     }
@@ -52,6 +72,7 @@ import Quotient from "./Quotient";
             let q = new Quotient()
             q.votes = Math.round(this.votes/i)
             q.politician = this.politicians[i-1]
+            q.partyWinner = this.party
             q.city=city
             q.order=i
             this.quotients.push(q)

@@ -23,8 +23,10 @@ country.vote()
 //Dividir coaliciones
 
 
-
+//Coge las coaliciones
 let temp:Array<{party:Coalition,seats:number}> = country.partiesCount.filter(pc=> pc.party instanceof Coalition)as Array<{party:Coalition,seats:number}>
+
+
 
 temp.map(pc=>{
     let auxSeats=  pc.seats 
@@ -61,7 +63,7 @@ function generateQuotients(seats,pp:{party:Party,percentage:number}){
     return array
 }
 
-country.partiesCount = country.partiesCount.filter(pc=> !(pc.party instanceof Coalition))as Array<{party:Party,seats:number}>
+//country.partiesCount = country.partiesCount.filter(pc=> !(pc.party instanceof Coalition))as Array<{party:Party,seats:number}>
 
 
 //console.log(country.voteCounts)
@@ -77,14 +79,30 @@ country.voteCounts.map(vc=>{
 
 let psoe = country.parties[0]
 country.parties.map(p=>{
-            console.log(util.inspect( "Partido PSOE vs "+p.shortName+" distancia=>"+psoe.getIdeology().getDistance(p.getIdeology())+p.getIdeology().getName(), false,3,true))
+           // console.log(util.inspect( "Partido PSOE vs "+p.shortName+" distancia=>"+psoe.getIdeology().getDistance(p.getIdeology())+p.getIdeology().getName(), false,3,true))
 
 })
 
 country.coalitions.map(p=>{
-    console.log(util.inspect( "Partido PSOE vs "+p.shortName+" distancia=>"+psoe.getIdeology().getDistance(p.getIdeology())+p.getIdeology().getName(), false,3,true))
+   // console.log(util.inspect( "Partido PSOE vs "+p.shortName+" distancia=>"+psoe.getIdeology().getDistance(p.getIdeology())+p.getIdeology().getName(), false,3,true))
+            //console.log(util.inspect( "Partido PSOE vs "+p.shortName+" distancia=>"+psoe.getIdeology().getDistance(p.getIdeology())+p.getIdeology().getName(), false,3,true))
 
 })
+
+country.voteCounts.map(p=>{
+    if(p.city.slug=="barcelona"){
+    
+       
+        p.seatsWinner.map(a=>{
+            //console.log(a.quotient.politician.name+"f")
+
+        })
+    }
+
+})
+//console.log(country.voteCounts)
+
+export {country}
 
 
 

@@ -9,12 +9,31 @@ import VoteTable from "./VoteTable";
 export default class VoteCount {
     voteTables:Array<VoteTable>= [];
     city:City
+    //Todos los cocientes
     quotients:Quotient[]= []
+    // Escaños que han sido ganadores
     seatsWinner:Seat[]= []
     totalVotes:number;
     abstentions:number
     invalidVotes:number
     blankVotes:number
+
+
+    getPartyCount():Array<{party:Party|Coalition,seats:number,seatObject:Seat}>{
+        let partiesCount:Array<{party:Party|Coalition,seats:number,seatObject:Seat}> = []
+
+        this.seatsWinner.map(s=>{
+            let r= partiesCount.find(f=> f.party.slug ==s.quotient.partyWinner.slug )
+            if(r== undefined){
+                partiesCount.push({party:s.quotient.partyWinner,seats:1,seatObject:s})
+            }else{
+                r.seats++
+            }
+        })
+        partiesCount.sort((a,b) => b.seats - a.seats)
+
+        return partiesCount
+    }
 
     getValidVotes(){
         return this.totalVotes+this.blankVotes
@@ -46,10 +65,10 @@ export default class VoteCount {
 
     countSeats(){
         for(let i = 0;i<this.city.seats;i++){
-            let slug = this.quotients[i].politician.party.slug
+            let slug = this.quotients[i].partyWinner.slug
             this.voteTables.find(vt=> vt.party.slug === slug).seats++
             let s = new Seat()
-            s.Quotient=this.quotients[i]
+            s.quotient=this.quotients[i]
             this.seatsWinner.push(s)
         }
     }
@@ -108,17 +127,22 @@ export default class VoteCount {
         let partiesAndcoalitions:Array<Party|Coalition> = []
         let allTables:Array<VoteTable> = []
 
+            //  currentParties = partiesList.filter((p)=> p.popularity.find((pop => pop.city == "global" && pop.popularity >0)) || p.popularity.find((pop => pop.city === this.city.slug && pop.popularity >0 )))
+       currentParties = partiesList.filter((p)=> (p.popularity.find((pop => pop.city == "global" && pop.popularity >0)) && !p.popularity.find((pop => pop.city == this.city.slug && pop.popularity ==0))) || p.popularity.find((pop => pop.city === this.city.slug && pop.popularity >0 )))
+       
 
-        currentParties = partiesList.filter((p)=> p.popularity.find((pop => pop.city == "global" && pop.popularity >0)) || p.popularity.find((pop => pop.city === this.city.slug && pop.popularity >0 )))
-        
+
+
         coalitionsList.map(c=>{
             let colectionsOK = true
             c.parties.map(ca=>{
                 if(!colectionsOK) return false
+               // if(currentParties.find(p=>p.slug==ca.party.slug) === undefined) {
                 if(currentParties.find(p=>p.slug==ca.party.slug) === undefined) {
                     colectionsOK = false;
                     return false 
                 }  
+                //Exclusiones
             })
             if(colectionsOK){
                 currentCoalitions.push(c)

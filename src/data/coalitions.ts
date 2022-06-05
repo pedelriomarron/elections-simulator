@@ -66,6 +66,19 @@ const coalitions = [
 
     },
     {
+        "name":"En Comú Podem-Guanyem el Canvi",
+        "shortName":"ECP-Guanyem el Canvi",
+        "slug":"ecp-guanyem-el-canvi",
+        "color":"#FF4E00",
+        "includedCities":[],
+        "excludedCities":[],
+        "parties":[
+            {"party":"catcomu","percentage":71},
+            {"party":"podemos","percentage":29},
+        ]
+
+    },
+    {
         "name":"Recortes Cero - Grupo Verde",
         "shortName":"Recortes Cero",
         "slug":"recortes-cero-gv",

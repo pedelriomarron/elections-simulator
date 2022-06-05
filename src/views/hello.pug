@@ -1,0 +1,22 @@
+html
+    head
+        title=">test"
+    body
+        <h3>Partidos politicos y escaños obtenidos</h3>
+        ul
+            each val in country.getPartiesCount()
+                 li= "Partido: " + val.party.name+" Escaños : "+val.seats
+        <hr>
+        <h3>Ciudades</h3>
+        ul
+            each val in country.voteCounts
+                li= "Ciudad: " + val.city.name
+                    ul  
+                        each val2 in val.getPartyCount()
+                            li= "Partido: " + val2.party.name+" - Escaños: "+val2.seats
+                                ul
+                                    each val1 in val.seatsWinner
+                                        if val1.quotient.partyWinner.slug == val2.party.slug
+                                            li= "Politico: " + val1.quotient.politician.name+" - Partido (Real): "+val1.quotient.politician.party.name+" - (Coalicion): "+val1.quotient.partyWinner.name
+
+        <hr>

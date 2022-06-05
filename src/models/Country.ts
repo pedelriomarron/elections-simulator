@@ -1,6 +1,7 @@
 import {City} from "./City";
 import { Coalition } from "./Coalition";
 import { Party } from "./Party";
+import Seat from "./Seat";
 import VoteCount from "./VoteCount";
 
  
@@ -12,9 +13,9 @@ import VoteCount from "./VoteCount";
     parties:Array<Party>=[]
     coalitions:Array<Coalition>=[]
     //Contador de elecciones
-    partiesCount:Array<{party:Party|Coalition,seats:number}> = []
+    partiesCount:Array<{party:Party|Coalition,seats:number,seatObject:Seat}> = []
     partiesAndcoalitions:Array<Party|Coalition> = []
-    maxRandom:number=0
+    maxRandom:number=100
     minRandom:number=0
     random:boolean=false
 
@@ -38,8 +39,9 @@ import VoteCount from "./VoteCount";
                 vc1.generateAllQuotients()
                 this.voteCounts.push(vc1)
         })
-        this.generatePartiesCount()
+        //this.generatePartiesCount()
         //Repartir escaños
+        /*
         this.voteCounts.map(vc=>{
             //console.log("Ciudad: **",vc.city.name," **")
             vc.voteTables.map(vt=>{
@@ -51,14 +53,36 @@ import VoteCount from "./VoteCount";
 
 
         this.partiesCount.sort((a,b) => b.seats - a.seats)
+
+        */
         
     }
 
-    generatePartiesCount(){
+    getPartiesCount(){
+        /*
         this.partiesAndcoalitions=this.partiesAndcoalitions.concat(this.parties,this.coalitions)
         this.partiesAndcoalitions.map(p=>{
             this.partiesCount.push({party:p,seats:0})
         })
+*/
+        let partiesCount:Array<{party:Party|Coalition,seats:number,seatObject:Seat}> = []
+
+
+        this.voteCounts.map(vc=>{           
+            vc.getPartyCount().map(item=>{
+                let r= partiesCount.find(f=> f.party.slug == item.party.slug )
+                if(r== undefined){
+                    partiesCount.push({party:item.party,seats:item.seats,seatObject:item.seatObject})
+                }else{
+                    r.seats=r.seats+item.seats
+                }
+            })   
+        })
+
+        partiesCount.sort((a,b) => b.seats - a.seats)
+        return partiesCount
+
+
     }
 }
 
