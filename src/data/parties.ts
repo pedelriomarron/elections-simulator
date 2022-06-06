@@ -137,7 +137,7 @@ const parties = [
 
 
         ],
-        "ideology": {economy:70,social:20},
+        "ideology": {economy:70,social:10},
 
     },    
     {
@@ -287,7 +287,7 @@ const parties = [
             {city:"guipuzcoa",popularity:30.6},
             {city:"vizcaya",popularity:35.4},
         ],
-        "ideology": {economy:60,social:45},
+        "ideology": {economy:70,social:60},
 
     },
     {

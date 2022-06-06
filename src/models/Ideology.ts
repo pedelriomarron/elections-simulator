@@ -27,10 +27,10 @@ export default class Ideology {
         let array:Array<{name:string,xmin:number,xmax:number,ymin:number,ymax:number}> = []
 
         array.push({name:"Centro",xmin:20,xmax:80,ymin:20,ymax:80})
-        array.push({name:"Totalitario",xmin:0,xmax:50,ymin:0,ymax:50})
-        array.push({name:"Conservador",xmin:50,xmax:100,ymin:0,ymax:50})
-        array.push({name:"Progresista",xmin:0,xmax:50,ymin:50,ymax:100})
-        array.push({name:"Liberal",xmin:50,xmax:100,ymin:50,ymax:100})
+        array.push({name:"Totalitario",xmin:0,xmax:40,ymin:0,ymax:40})
+        array.push({name:"Conservador",xmin:60,xmax:100,ymin:0,ymax:40})
+        array.push({name:"Progresista",xmin:0,xmax:40,ymin:60,ymax:100})
+        array.push({name:"Liberal",xmin:60,xmax:100,ymin:60,ymax:100})
 
 
         let resfilter = array.filter(f=> this.economy >= f.xmin && this.economy <= f.xmax && this.social >= f.ymin && this.social <= f.ymax) 
