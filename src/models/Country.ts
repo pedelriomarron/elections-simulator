@@ -15,9 +15,9 @@ import VoteCount from "./VoteCount";
     //Contador de elecciones
     //partiesCount:Array<{party:Party|Coalition,seats:number,seatObject:Seat}> = []
     //partiesAndcoalitions:Array<Party|Coalition> = []
-    maxRandom:number=100
-    minRandom:number=0
-    random:boolean=false
+    maxRandom:number=5
+    minRandom:number=1.5
+    random:boolean=true
 
 
 
@@ -82,6 +82,33 @@ import VoteCount from "./VoteCount";
 
         this.voteCounts.map(vc=>{           
             vc.getPartyCount().map(item=>{
+                let r= partiesCount.find(f=> f.party.slug == item.party.slug )
+                if(r== undefined){
+                    partiesCount.push({party:item.party,seats:item.seats,seatObject:item.seatObject})
+                }else{
+                    r.seats=r.seats+item.seats
+                }
+            })   
+        })
+
+        partiesCount.sort((a,b) => b.seats - a.seats)
+        return partiesCount
+
+
+    }
+
+    getPartiesIndividualCount(){
+        /*
+        this.partiesAndcoalitions=this.partiesAndcoalitions.concat(this.parties,this.coalitions)
+        this.partiesAndcoalitions.map(p=>{
+            this.partiesCount.push({party:p,seats:0})
+        })
+*/
+        let partiesCount:Array<{party:Party|Coalition,seats:number,seatObject:Seat}> = []
+
+
+        this.voteCounts.map(vc=>{           
+            vc.getPartyIndividualCount().map(item=>{
                 let r= partiesCount.find(f=> f.party.slug == item.party.slug )
                 if(r== undefined){
                     partiesCount.push({party:item.party,seats:item.seats,seatObject:item.seatObject})

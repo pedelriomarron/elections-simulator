@@ -8,7 +8,61 @@ const parties = [
         "color":"#E4010B",
         "includedCities":[],
         "excludedCities":[],
-        "popularity":[{city:"global",popularity:28}],
+        "popularity":[
+            {city:"global",popularity:28},
+            //Cataluña
+            {city:"barcelona",popularity:0},
+            {city:"tarragona",popularity:0},
+            {city:"gerona",popularity:0},
+            {city:"lerida",popularity:0},
+            //Pais Vasco
+            {city:"alava",popularity:22},
+            {city:"guipuzcoa",popularity:18},
+            {city:"vizcaya",popularity:19.2},
+            //Galicia
+            {city:"la-coruna",popularity:30.3},
+            {city:"lugo",popularity:32.3},
+            {city:"pontevedra",popularity:32.1},
+            {city:"orense",popularity:33.5},
+            //teruel
+            {city:"teruel",popularity:25.7},
+            //Castilla y Leon
+            {city:"avila",popularity:26.4},
+            {city:"burgos",popularity:32.7},
+            {city:"leon",popularity:33.8},
+            {city:"palencia",popularity:33.6},
+            {city:"salamanca",popularity:29.75},
+            {city:"segovia",popularity:30},
+            {city:"soria",popularity:35.1},
+            {city:"valladolid",popularity:30.6},
+            {city:"zamora",popularity:33.2},
+            //Cantabria
+            {city:"cantabria",popularity:23.3},
+            //Melilla
+            {city:"melilla",popularity:16.5},
+
+
+        ],
+        "ideology": {economy:30,social:60},
+
+    },
+    {
+        "name":"Partido de los Socialistas de Cataluña",
+        "shortName":"PSC-PSOE",
+        "slug":"psc-psoe",
+        "color":"#E4010B",
+        "includedCities":[],
+        "excludedCities":[],
+        "popularity":[
+            {city:"global",popularity:0},
+            //Cataluña
+            {city:"barcelona",popularity:22},
+            {city:"tarragona",popularity:19.2},
+            {city:"gerona",popularity:14.9},
+            {city:"lerida",popularity:14.6},
+            //***PSC */
+
+        ],
         "ideology": {economy:30,social:60},
 
     },
@@ -23,6 +77,35 @@ const parties = [
             {city:"global",popularity:21},
             {city:"asturias",popularity:11.5},
             {city:"navarra",popularity:0},
+            //Cataluña
+            {city:"barcelona",popularity:7.7},
+            {city:"tarragona",popularity:7.8},
+            {city:"gerona",popularity:5},
+            {city:"lerida",popularity:7.1},
+            //Pais Vasco
+            {city:"alava",popularity:15},
+            {city:"guipuzcoa",popularity:6},
+            {city:"vizcaya",popularity:8.8},
+            //Galicia
+            {city:"la-coruna",popularity:30.9},
+            {city:"lugo",popularity:38.5},
+            {city:"pontevedra",popularity:29.3},
+            {city:"orense",popularity:39.8},
+            //Castilla y Leon
+            {city:"avila",popularity:35.1},
+            {city:"burgos",popularity:31.2},
+            {city:"leon",popularity:28.7},
+            {city:"palencia",popularity:36},
+            {city:"salamanca",popularity:35},
+            {city:"segovia",popularity:33.4},
+            {city:"soria",popularity:33.4},
+            {city:"valladolid",popularity:29.8},
+            {city:"zamora",popularity:34},
+            //Cantabria
+            {city:"cantabria",popularity:26},
+            //Melilla
+            {city:"melilla",popularity:29.7},
+
         ],
         "ideology": {economy:70,social:40},
 
@@ -34,7 +117,26 @@ const parties = [
         "color":"#7CBD2A",
         "includedCities":[],
         "excludedCities":[],
-        "popularity":[{city:"global",popularity:15}],
+        "popularity":[
+            {city:"global",popularity:15},
+            //Cataluña
+            {city:"barcelona",popularity:6.3},
+            {city:"tarragona",popularity:8.1},
+            {city:"gerona",popularity:5.2},
+            {city:"lerida",popularity:4.5},
+            //Pais Vasco
+            {city:"alava",popularity:3.8},
+            {city:"guipuzcoa",popularity:1.9},
+            {city:"vizcaya",popularity:2.4},
+            //Murcia
+            {city:"murcia",popularity:28.1},
+            //Navarra
+            {city:"navarra",popularity:5.8},
+            //Ceuta
+            {city:"ceuta",popularity:35.5},
+
+
+        ],
         "ideology": {economy:70,social:20},
 
     },    
@@ -47,14 +149,19 @@ const parties = [
         "excludedCities":[],
         "popularity":[
             {city:"global",popularity:9},
+            //Cataluña
             {city:"barcelona",popularity:4.6},
             {city:"tarragona",popularity:3.6},
             {city:"gerona",popularity:2.9},
             {city:"lerida",popularity:2.4},
+            //Galicia
             {city:"la-coruna",popularity:5.1},
             {city:"lugo",popularity:3.7},
             {city:"pontevedra",popularity:6.3},
             {city:"orense",popularity:3.2},
+            //Huesca
+            {city:"huesca",popularity:6.25},
+
     ],
         "ideology": {economy:10,social:60},
 
@@ -76,6 +183,8 @@ const parties = [
             {city:"lugo",popularity:0},
             {city:"pontevedra",popularity:0},
             {city:"orense",popularity:0},
+            {city:"huesca",popularity:3.25},
+
         ],
         "ideology": {economy:1,social:8},
 
@@ -121,7 +230,13 @@ const parties = [
         "color":"#FF4E00",
         "includedCities":[],
         "excludedCities":[],
-        "popularity":[{city:"global",popularity:6}],
+        "popularity":[
+            {city:"global",popularity:6},
+            //Pais Vasco
+            {city:"alava",popularity:1.5},
+            {city:"guipuzcoa",popularity:1},
+            {city:"vizcaya",popularity:1.1},
+        ],
         "ideology": {economy:70,social:65},
 
     },
@@ -533,6 +648,34 @@ const parties = [
         "popularity":[
             {city:"global",popularity:0},
             {city:"teruel",popularity:26.8},
+        ],
+        "ideology": {economy:5,social:8},
+
+    },
+    {
+        "name":"Alto Aragón En Común",
+        "shortName":"AAeC",
+        "slug":"aaec",
+        "color":"#B222EB",
+        "includedCities":[],
+        "excludedCities":[],
+        "popularity":[
+            {city:"global",popularity:0},
+            {city:"huesca",popularity:2.5},
+        ],
+        "ideology": {economy:5,social:8},
+
+    },
+    {
+        "name":"Coalición por Melilla",
+        "shortName":"CpM",
+        "slug":"cpm",
+        "color":"#488A43",
+        "includedCities":[],
+        "excludedCities":[],
+        "popularity":[
+            {city:"global",popularity:0},
+            {city:"melilla",popularity:29.1},
         ],
         "ideology": {economy:5,social:8},
 

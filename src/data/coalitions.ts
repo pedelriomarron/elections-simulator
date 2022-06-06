@@ -14,6 +14,21 @@ const coalitions = [
 
     },
     {
+        "name":"Unidas Podemos - Alto Aragón En Común",
+        "shortName":"Podemos-IU - Alto Aragón En Común",
+        "slug":"podemos-iu-aaec",
+        "color":"#693279",
+        "includedCities":[],
+        "excludedCities":[],
+        "parties":[
+            {"party":"podemos","percentage":54},
+            {"party":"iu","percentage":26},
+            {"party":"aaec","percentage":20},
+
+        ]
+
+    },
+    {
         "name":"Ahora Canarias",
         "shortName":"Ahora Canarias",
         "slug":"ahora-canarias",

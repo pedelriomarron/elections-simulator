@@ -35,6 +35,24 @@ export default class VoteCount {
         return partiesCount
     }
 
+
+    getPartyIndividualCount():Array<{party:Party|Coalition,seats:number,seatObject:Seat}>{
+        let partiesCount:Array<{party:Party|Coalition,seats:number,seatObject:Seat}> = []
+
+        this.seatsWinner.map(s=>{
+            let r= partiesCount.find(f=> f.party.slug ==s.quotient.partyWinner.slug )
+            if(r== undefined){
+                partiesCount.push({party:s.quotient.politician.party,seats:1,seatObject:s})
+            }else{
+                r.seats++
+            }
+        })
+        partiesCount.sort((a,b) => b.seats - a.seats)
+
+        return partiesCount
+    }
+
+
     getValidVotes(){
         return this.totalVotes+this.blankVotes
     }
@@ -130,8 +148,8 @@ export default class VoteCount {
             //  currentParties = partiesList.filter((p)=> p.popularity.find((pop => pop.city == "global" && pop.popularity >0)) || p.popularity.find((pop => pop.city === this.city.slug && pop.popularity >0 )))
        currentParties = partiesList.filter((p)=> (p.popularity.find((pop => pop.city == "global" && pop.popularity >0)) && !p.popularity.find((pop => pop.city == this.city.slug && pop.popularity ==0))) || p.popularity.find((pop => pop.city === this.city.slug && pop.popularity >0 )))
        
-
-
+        //Ordenar donde hay mas partidos para casoos como aragon
+       coalitionsList.sort((a,b) => b.parties.length - a.parties.length)
 
         coalitionsList.map(c=>{
             let colectionsOK = true
@@ -144,7 +162,8 @@ export default class VoteCount {
                 }  
                 //Exclusiones
             })
-            if(colectionsOK){
+
+            if(colectionsOK){           
                 currentCoalitions.push(c)
                 c.parties.map(ca=>{
                     currentParties = currentParties.filter(p=> p.slug !=ca.party.slug )
