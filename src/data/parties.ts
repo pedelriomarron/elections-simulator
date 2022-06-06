@@ -63,7 +63,7 @@ const parties = [
             //***PSC */
 
         ],
-        "ideology": {economy:30,social:60},
+        "ideology": {economy:25,social:60},
 
     },
     {
@@ -186,7 +186,7 @@ const parties = [
             {city:"huesca",popularity:3.25},
 
         ],
-        "ideology": {economy:1,social:8},
+        "ideology": {economy:0,social:70},
 
     },
     {
@@ -203,7 +203,7 @@ const parties = [
             {city:"gerona",popularity:25},
             {city:"lerida",popularity:30},
         ],
-        "ideology": {economy:3,social:9},
+        "ideology": {economy:10,social:60},
 
     },
     {
@@ -220,7 +220,7 @@ const parties = [
             {city:"gerona",popularity:1},
             {city:"lerida",popularity:1},
         ],
-        "ideology": {economy:3,social:8},
+        "ideology": {economy:10,social:80},
 
     },
     {
@@ -287,7 +287,7 @@ const parties = [
             {city:"guipuzcoa",popularity:30.6},
             {city:"vizcaya",popularity:35.4},
         ],
-        "ideology": {economy:0,social:8},
+        "ideology": {economy:60,social:45},
 
     },
     {
@@ -305,7 +305,7 @@ const parties = [
             {city:"navarra",popularity:17},
 
         ],
-        "ideology": {economy:5,social:8},
+        "ideology": {economy:0,social:90},
 
     },
     {
@@ -320,7 +320,7 @@ const parties = [
             {city:"las-palmas",popularity:0.1},
             {city:"santa-cruz-de-tenerife",popularity:0.1},
         ],
-        "ideology": {economy:5,social:8},
+        "ideology": {economy:10,social:70},
 
     },
     {
@@ -335,7 +335,7 @@ const parties = [
             {city:"las-palmas",popularity:0.1},
             {city:"santa-cruz-de-tenerife",popularity:0.1},
         ],
-        "ideology": {economy:5,social:8},
+        "ideology": {economy:10,social:70},
 
     },
     {
@@ -352,7 +352,7 @@ const parties = [
             {city:"gerona",popularity:8},
             {city:"lerida",popularity:6},
         ],
-        "ideology": {economy:5,social:8},
+        "ideology": {economy:0,social:100},
 
     },
     {
@@ -369,7 +369,7 @@ const parties = [
             {city:"gerona",popularity:1},
             {city:"lerida",popularity:1},
         ],
-        "ideology": {economy:5,social:8},
+        "ideology": {economy:10,social:60},
 
     },
     {
@@ -386,7 +386,7 @@ const parties = [
             {city:"gerona",popularity:6.6},
             {city:"lerida",popularity:5.6},
         ],
-        "ideology": {economy:5,social:8},
+        "ideology": {economy:10,social:70},
 
     },
     {
@@ -401,7 +401,7 @@ const parties = [
             {city:"las-palmas",popularity:5},
             {city:"santa-cruz-de-tenerife",popularity:8.5},
         ],
-        "ideology": {economy:5,social:8},
+        "ideology": {economy:70,social:70},
 
     },
     {
@@ -416,7 +416,7 @@ const parties = [
             {city:"las-palmas",popularity:5},
             {city:"santa-cruz-de-tenerife",popularity:8.5},
         ],
-        "ideology": {economy:5,social:8},
+        "ideology": {economy:40,social:60},
 
     },
     {
@@ -433,7 +433,7 @@ const parties = [
             {city:"pontevedra",popularity:9.3},
             {city:"orense",popularity:4.8},
         ],
-        "ideology": {economy:5,social:8},
+        "ideology": {economy:0,social:70},
 
     },
     {
@@ -444,7 +444,7 @@ const parties = [
         "includedCities":[],
         "excludedCities":[],
         "popularity":[{city:"global",popularity:2}],
-        "ideology": {economy:5,social:8},
+        "ideology": {economy:25,social:80},
 
     },
     {
@@ -455,7 +455,7 @@ const parties = [
         "includedCities":[],
         "excludedCities":[],
         "popularity":[{city:"global",popularity:0}],
-        "ideology": {economy:5,social:8},
+        "ideology": {economy:10,social:90},
 
     },
     {
@@ -466,7 +466,7 @@ const parties = [
         "includedCities":[],
         "excludedCities":[],
         "popularity":[{city:"global",popularity:1}],
-        "ideology": {economy:5,social:8},
+        "ideology": {economy:10,social:100},
 
     },
     {
@@ -477,7 +477,7 @@ const parties = [
         "includedCities":[],
         "excludedCities":[],
         "popularity":[{city:"global",popularity:0.04}],
-        "ideology": {economy:5,social:8},
+        "ideology": {economy:0,social:0},
 
     },
     {
@@ -488,7 +488,7 @@ const parties = [
         "includedCities":[],
         "excludedCities":[],
         "popularity":[{city:"global",popularity:0}],
-        "ideology": {economy:5,social:8},
+        "ideology": {economy:10,social:70},
 
     },
     {
@@ -499,7 +499,7 @@ const parties = [
         "includedCities":[],
         "excludedCities":[],
         "popularity":[{city:"global",popularity:0.02}],
-        "ideology": {economy:5,social:8},
+        "ideology": {economy:10,social:70},
 
     },
     {
@@ -510,7 +510,7 @@ const parties = [
         "includedCities":[],
         "excludedCities":[],
         "popularity":[{city:"global",popularity:0.04}],
-        "ideology": {economy:5,social:8},
+        "ideology": {economy:0,social:0},
 
     },
     {
@@ -521,7 +521,7 @@ const parties = [
         "includedCities":[],
         "excludedCities":[],
         "popularity":[{city:"global",popularity:0.04}],
-        "ideology": {economy:5,social:8},
+        "ideology": {economy:15,social:80},
 
     },
     {
@@ -532,7 +532,7 @@ const parties = [
         "includedCities":[],
         "excludedCities":[],
         "popularity":[{city:"global",popularity:0.04}],
-        "ideology": {economy:5,social:8},
+        "ideology": {economy:10,social:50},
 
     },
     {
@@ -543,7 +543,7 @@ const parties = [
         "includedCities":[],
         "excludedCities":[],
         "popularity":[{city:"global",popularity:0.04}],
-        "ideology": {economy:5,social:8},
+        "ideology": {economy:15,social:80},
 
     },
     {
@@ -554,7 +554,7 @@ const parties = [
         "includedCities":[],
         "excludedCities":[],
         "popularity":[{city:"global",popularity:0.06}],
-        "ideology": {economy:5,social:8},
+        "ideology": {economy:0,social:0},
 
     },
     {
@@ -565,7 +565,7 @@ const parties = [
         "includedCities":[],
         "excludedCities":[],
         "popularity":[{city:"global",popularity:0.11}],
-        "ideology": {economy:5,social:8},
+        "ideology": {economy:50,social:80},
 
     },
     {
@@ -576,7 +576,7 @@ const parties = [
         "includedCities":[],
         "excludedCities":[],
         "popularity":[{city:"global",popularity:0.05}],
-        "ideology": {economy:5,social:8},
+        "ideology": {economy:0,social:0},
 
     },
     {
@@ -590,7 +590,7 @@ const parties = [
             {city:"global",popularity:0},
             {city:"asturias",popularity:11.5}
     ],
-        "ideology": {economy:5,social:8},
+        "ideology": {economy:70,social:40},
 
     },
     {
@@ -621,7 +621,7 @@ const parties = [
             {city:"pontevedra",popularity:7.5},
             {city:"orense",popularity:6},
         ],
-        "ideology": {economy:5,social:8},
+        "ideology": {economy:0,social:75},
 
     },
     {
@@ -635,7 +635,7 @@ const parties = [
             {city:"global",popularity:0},
             {city:"cantabria",popularity:21.15}
         ],
-        "ideology": {economy:5,social:8},
+        "ideology": {economy:50,social:50},
 
     },
     {
@@ -649,7 +649,7 @@ const parties = [
             {city:"global",popularity:0},
             {city:"teruel",popularity:26.8},
         ],
-        "ideology": {economy:5,social:8},
+        "ideology": {economy:50,social:50},
 
     },
     {
@@ -663,7 +663,7 @@ const parties = [
             {city:"global",popularity:0},
             {city:"huesca",popularity:2.5},
         ],
-        "ideology": {economy:5,social:8},
+        "ideology": {economy:10,social:60},
 
     },
     {
@@ -677,7 +677,7 @@ const parties = [
             {city:"global",popularity:0},
             {city:"melilla",popularity:29.1},
         ],
-        "ideology": {economy:5,social:8},
+        "ideology": {economy:30,social:60},
 
     },
 

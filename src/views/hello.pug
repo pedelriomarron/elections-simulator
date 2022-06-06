@@ -10,7 +10,7 @@ html
          <h3>Partidos politicos y escaños obtenidos (Partido)</h3>
         ul
             each val in country.getPartiesIndividualCount()
-                 li= "Partido: " + val.party.name+" Escaños : "+val.seats
+                 li= "Partido: " + val.party.name+" Escaños : "+val.seats +" --"+val.party.ideology.getName()
         <hr>
         <h3>Ciudades</h3>
         ul
